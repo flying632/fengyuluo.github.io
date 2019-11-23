@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="[TOC] 安装详情Ubuntu版本的选择​    Ubuntu的版本，最初选择的是Ubuntu kylin版本，中国的衍生版本，装完后各种莫名bug，搜了一下解决办法，都是推荐重装原生Ubuntu系统，就重装了原生版本。 Ubuntu 18.04.2 LTS 版本 LTS版本，Long Term Support  长时间支持版本（三年），一般的版本支持为18个月 详细的安装步骤 制作U盘启动盘">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装windows10和Ubuntu双系统踩坑">
+<meta property="og:url" content="https://flying632.github.io/2019/03/22/安装windows10和Ubuntu双系统的各种问题大全/index.html">
+<meta property="og:site_name" content="风雨落">
+<meta property="og:description" content="[TOC] 安装详情Ubuntu版本的选择​    Ubuntu的版本，最初选择的是Ubuntu kylin版本，中国的衍生版本，装完后各种莫名bug，搜了一下解决办法，都是推荐重装原生Ubuntu系统，就重装了原生版本。 Ubuntu 18.04.2 LTS 版本 LTS版本，Long Term Support  长时间支持版本（三年），一般的版本支持为18个月 详细的安装步骤 制作U盘启动盘">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img-blog.csdn.net/20181004153331322?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTQ1MDE0NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20181004153438198?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTQ1MDE0NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20181004153637460?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTQ1MDE0NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20181004154430744?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTQ1MDE0NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20181004154501845?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTQ1MDE0NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190322231009207.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190322231052403.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNjM1MDY5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190322231059342.png">
+<meta property="og:updated_time" content="2019-04-06T12:01:31.551Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安装windows10和Ubuntu双系统踩坑">
+<meta name="twitter:description" content="[TOC] 安装详情Ubuntu版本的选择​    Ubuntu的版本，最初选择的是Ubuntu kylin版本，中国的衍生版本，装完后各种莫名bug，搜了一下解决办法，都是推荐重装原生Ubuntu系统，就重装了原生版本。 Ubuntu 18.04.2 LTS 版本 LTS版本，Long Term Support  长时间支持版本（三年），一般的版本支持为18个月 详细的安装步骤 制作U盘启动盘">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20181004153331322?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTQ1MDE0NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://flying632.github.io/2019/03/22/安装windows10和Ubuntu双系统的各种问题大全/">
+
+
+
+
+
+  <title>安装windows10和Ubuntu双系统踩坑 | 风雨落</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">风雨落</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">前行中 632</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://flying632.github.io/2019/03/22/安装windows10和Ubuntu双系统的各种问题大全/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="baosong sun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/hdImg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="风雨落">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">安装windows10和Ubuntu双系统踩坑</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-22T23:05:20+08:00">
+                2019-03-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/踩坑集/" itemprop="url" rel="index">
+                    <span itemprop="name">踩坑集</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>[TOC]</p>
+<h1 id="安装详情"><a href="#安装详情" class="headerlink" title="安装详情"></a>安装详情</h1><h3 id="Ubuntu版本的选择"><a href="#Ubuntu版本的选择" class="headerlink" title="Ubuntu版本的选择"></a>Ubuntu版本的选择</h3><p>​    Ubuntu的版本，最初选择的是Ubuntu kylin版本，中国的衍生版本，装完后各种莫名bug，搜了一下解决办法，都是推荐重装原生Ubuntu系统，就重装了原生版本。</p>
+<p><strong>Ubuntu 18.04.2 LTS 版本</strong></p>
+<p><u>LTS版本，Long Term Support  长时间支持版本（三年），一般的版本支持为18个月</u></p>
+<h3 id="详细的安装步骤"><a href="#详细的安装步骤" class="headerlink" title="详细的安装步骤"></a>详细的安装步骤</h3><ol>
+<li><p>制作U盘启动盘</p>
+<p>使用UltralSO制作启动盘，如果下载后的镜像打开后，发现只有一个EFI文件夹，恭喜中奖了，你下的UltrISO版本太低了，换个最新的版本的就好了，直接去官网下载，然后使用即可</p>
+<blockquote>
+<p>打开软碟通，点击左上角的“文件”——“打开”，然后选择ubuntu镜像存放的位置，确定。</p>
+<p>点击上方菜单的“启动”——“写入硬盘映像”。</p>
+<p>选择写入方式USB-HDD+，隐藏启动分区选择无，然后点击写入，就成功的把ubuntu镜像写入u盘里了，最后显示刻录成功，这样ubuntu的u盘启动盘就制好了。</p>
+</blockquote>
+</li>
+<li><p>创建磁盘分区</p>
+<p>从windows的系统磁盘管理中分出Ubuntu的空间，大小根据自己的需要来定</p>
+<p>（1）右击我的电脑，管理，选择磁盘管理</p>
+<p>​       <img src="https://img-blog.csdn.net/20181004153331322?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTQ1MDE0NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>​       <img src="https://img-blog.csdn.net/20181004153438198?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTQ1MDE0NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>（2）选择剩余空间较大的可分配磁盘，右键并选择<strong>“压缩卷”</strong>，这里选择压缩E盘50G左右的空间：</p>
+<p>​      <img src="https://img-blog.csdn.net/20181004153637460?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTQ1MDE0NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>（3）点击“压缩”之后，E盘后部出现黑色的50G<strong>“未分配空间”</strong>，磁盘分区过程完成。</p>
+</li>
+<li><p>禁用快速启动</p>
+<p>按住<strong>Win + X</strong>(请记住这个万能的组合)，选择<strong>“电源选项”</strong>，”选择电源按钮的功能”，”更改当前不可用的设置”，取消选择”启用快速启动(推荐)”。</p>
+<p><img src="https://img-blog.csdn.net/20181004154430744?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTQ1MDE0NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img">  </p>
+<p><img src="https://img-blog.csdn.net/20181004154501845?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTQ1MDE0NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+</li>
+<li><p>开始安装，重启电脑，U盘启动</p>
+<p>HP是按F10，进入BIOS界面，在启动方式中将U盘启动调为优先级最高，</p>
+<p><strong><u>在这里BIOS界面有个可选的操作Secure boot （安全启动），建议选为disable（禁用）</u></strong></p>
+</li>
+<li><p>进入后按部就班的点击继续即可，进入分区界面，选择“其他选项”，“继续”</p>
+<p>然后就对我们预先空出来的50G的空闲空间进行操作</p>
+<p>分区这样分：</p>
+<p>/   ：16G （16384MB）主分区 exe4</p>
+<p>swap：16G （16384MB）逻辑分区，交换分区</p>
+<p>/boot ：1G （1024MB）</p>
+<p>efi ：2G （2048MB）efi系统分区</p>
+<p>/home ：剩余的空间都放着</p>
+</li>
+<li><p>之后就正常安装重启即可</p>
+</li>
+</ol>
+<h3 id="安装时需要注意的点"><a href="#安装时需要注意的点" class="headerlink" title="安装时需要注意的点"></a>安装时需要注意的点</h3><ul>
+<li>​    /boot的挂载空间大一些，为好，不然后面会出问题，系统内核一更新，空间就不够了，类似这种</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20190322231009207.png" alt="在这里插入图片描述"></p>
+<ul>
+<li>上面的分区方式是针对当前的Windows系统是基于EFI启动的，而不是 legacy boot方式，所以需要eft系统分区，并且也不需要使用EasyBCD这样的工具添加引导</li>
+</ul>
+<h1 id="问题总结"><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h1><h3 id="Ubuntu安装失败，如何删除"><a href="#Ubuntu安装失败，如何删除" class="headerlink" title="Ubuntu安装失败，如何删除"></a>Ubuntu安装失败，如何删除</h3><p>进入windows 10系统，下载MBRfix软件</p>
+<p>MBRfix软件是一款可以修复系统主引导记录数据的小软件</p>
+<p>如果是64位的win10系统，则需要运行MbrFix64.exe</p>
+<p>运行MbrFix64.exe程序</p>
+<ol>
+<li><p>使用CMD命令运行命令控制台</p>
+</li>
+<li><p>将当期路径切换到MbrFix64.exe文件所在的的路径</p>
+</li>
+<li><p>运行如下命令：MbrFix64.exe /drive 0 fixmbr</p>
+</li>
+<li><p>按照命令提示输入：Y</p>
+</li>
+</ol>
+<p>如果提示失败，权限不够，以管理员的身份运行，没有错误信息出现则成功了</p>
+<p>之后就可以在Windows的磁盘管理中将Ubuntu占用的分区直接删除掉了，编程空闲空间</p>
+<h3 id="Windows环境如何删除efi分区"><a href="#Windows环境如何删除efi分区" class="headerlink" title="Windows环境如何删除efi分区"></a>Windows环境如何删除efi分区</h3><ol>
+<li><p>Win+R打开运行，输入Diskpart打开来进行分区管理。</p>
+<p>输入list disk 查看当前磁盘列表，然后通过select disk X 来选择想要操作的磁盘，选中磁盘后，输入list partition来查看该磁盘下的分区：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190322231052403.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNjM1MDY5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
+<li><p>select partition X来选定EFI分区</p>
+</li>
+<li><p>delete partition override</p>
+<p><img src="https://img-blog.csdnimg.cn/20190322231059342.png" alt="在这里插入图片描述"></p>
+</li>
+</ol>
+<hr>
+<h3 id="Ubuntu重启或关机都会黑屏，只有左上角的一个光标"><a href="#Ubuntu重启或关机都会黑屏，只有左上角的一个光标" class="headerlink" title="Ubuntu重启或关机都会黑屏，只有左上角的一个光标"></a>Ubuntu重启或关机都会黑屏，只有左上角的一个光标</h3><p>1、通过之前安装Ubuntu的U盘，USB启动系统，然后点击“Try Ubuntu”</p>
+<p>2、添加Ubuntu的boot-repair的PPA源：</p>
+<pre><code>sudo add-apt-repository ppa:yannubuntu/boot-repair &amp;&amp; sudo apt-get update</code></pre><p>3、安装boot-repair：</p>
+<pre><code>sudo apt-get install -y boot-repair    </code></pre><p>4、在命令行中输入boot-repair，选择第一项</p>
+<p>5、会出现很多命令，一条条copy进去，执行</p>
+<p>6、修复成功后重启系统，问题解决。</p>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><ol>
+<li><a href="https://blog.csdn.net/weixin_39450145/article/details/82937665" target="_blank" rel="noopener">win10+Ubuntu17.10双系统安装（惠普台式机）</a></li>
+<li><a href="https://blog.csdn.net/weixin_39837402/article/details/79961912" target="_blank" rel="noopener">如何删除EFI分区</a></li>
+<li><a href="https://jingyan.baidu.com/article/47a29f249777b6c01423991a.html" target="_blank" rel="noopener">windows和Ubuntu双系统环境如何安全卸载ubuntu</a></li>
+<li><a href="https://www.linuxidc.com/Linux/2015-07/120748.htm" target="_blank" rel="noopener">修复Linux中的“提供类似行编辑的袖珍BASH…”的GRUB错误</a></li>
+<li><a href="https://blog.csdn.net/u011377290/article/details/81450940" target="_blank" rel="noopener">win10 vmware workstation14 安装Ubuntu16.04后重启，出现画面一直黑屏，左上角光标闪烁的问题解决</a></li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+	<div>
+		  
+			
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/03/22/安装windows10和Ubuntu双系统的各种问题大全/">安装windows10和Ubuntu双系统踩坑</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 baosong sun 的个人博客">baosong sun</a></p>
+  <p><span>发布时间:</span>2019年03月22日 - 23:03</p>
+  <p><span>最后更新:</span>2019年04月06日 - 20:04</p>
+  <p><span>原始链接:</span><a href="/2019/03/22/安装windows10和Ubuntu双系统的各种问题大全/" title="安装windows10和Ubuntu双系统踩坑">https://flying632.github.io/2019/03/22/安装windows10和Ubuntu双系统的各种问题大全/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://flying632.github.io/2019/03/22/安装windows10和Ubuntu双系统的各种问题大全/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	  $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+	    });
+    });  
+</script>
+
+
+		  
+	</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/14/WebPage-SpringBoot-mysql踩坑/" rel="next" title="WebPage+SpringBoot+mysql踩坑">
+                <i class="fa fa-chevron-left"></i> WebPage+SpringBoot+mysql踩坑
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/29/全排列题解/" rel="prev" title="全排列题解">
+                全排列题解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/hdImg.jpg" alt="baosong sun">
+            
+              <p class="site-author-name" itemprop="name">baosong sun</p>
+              <p class="site-description motion-element" itemprop="description">难道头等舱会比经济舱更快到达目的地吗？也许站着也不失为一种历练</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装详情"><span class="nav-number">1.</span> <span class="nav-text">安装详情</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu版本的选择"><span class="nav-number">1.0.1.</span> <span class="nav-text">Ubuntu版本的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细的安装步骤"><span class="nav-number">1.0.2.</span> <span class="nav-text">详细的安装步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装时需要注意的点"><span class="nav-number">1.0.3.</span> <span class="nav-text">安装时需要注意的点</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#问题总结"><span class="nav-number">2.</span> <span class="nav-text">问题总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu安装失败，如何删除"><span class="nav-number">2.0.1.</span> <span class="nav-text">Ubuntu安装失败，如何删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows环境如何删除efi分区"><span class="nav-number">2.0.2.</span> <span class="nav-text">Windows环境如何删除efi分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu重启或关机都会黑屏，只有左上角的一个光标"><span class="nav-number">2.0.3.</span> <span class="nav-text">Ubuntu重启或关机都会黑屏，只有左上角的一个光标</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用"><span class="nav-number">3.</span> <span class="nav-text">引用</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">baosong sun</span>
+
+  
+</div>
+
+
+	<div class="powered-by">
+	<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+	  本站访客数:<span id="busuanzi_value_site_uv"></span>
+	</span>
+	</div>
+ <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>-->
+ 
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+ 
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
